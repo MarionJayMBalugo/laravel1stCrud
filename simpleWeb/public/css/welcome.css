@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    background-color: blueviolet;
+}
+input{
+    border-radius: 20px;
+    margin: 5px;
+    width: 300px;
+   
+}
+#login{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+#name,#password
+{
+    padding-left: 20px;
+}
+#loginImage{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+h4{
+    color: white;
+}
+.container{
+    margin-top:15%; 
+}

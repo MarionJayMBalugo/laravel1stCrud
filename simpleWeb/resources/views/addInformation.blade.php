@@ -1,0 +1,40 @@
+@extends('layout.app')
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Laravel</title>
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"  href="{{ asset('/css/welcome.css') }}">
+    </head>
+    <body>
+    
+    @yield('sidebar')
+
+
+@section('content')
+    <div>
+    <form action="{{route('insertInfo')}}">
+    <h3>Add Information</h3>
+    <input type="text" name="first_name" placeholder="firstname"><br>
+    <input type="text" name="middle_name" placeholder="middlename"><br>
+    <input type="text" name="last_name" placeholder="lastname"><br>
+    <input type="text" name="age" placeholder="age"><br>
+    <input type="text" name="address" placeholder="address"><br>  
+    <input type="submit" name="add" placeholder="add information" class="btn btn-primary">  
+    </form>
+    </div>
+@endsection
+
+    
+   
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
